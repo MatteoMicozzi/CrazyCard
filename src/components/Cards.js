@@ -1,8 +1,10 @@
-const Cards = () => {
+const Cards = ({ cards }) => {
   return (
-    <div>
-
-    </div>
+    <>
+      {cards.map((card) => (
+        <div className='Card' key={card.id}>{card.type}</div>
+      ))}
+    </>
   )
 }
 

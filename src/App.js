@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import Header from './components/Header'
+import Cards from './components/Cards'
 
 function App() {
   const [cards] = useState([
     {
       id: 1,
-      cardType: 'Student Life',
+      type: 'Student Life',
       aprPercentage: 18.9,
       balanceTransferOfferMonthsDuration: 0,
       purchaseOfferMonthsDuration: 6,
@@ -14,7 +15,7 @@ function App() {
     },
     {
       id: 2,
-      cardType: 'Anywhere Card',
+      type: 'Anywhere Card',
       aprPercentage: 33.9,
       balanceTransferOfferMonthsDuration: 0,
       purchaseOfferMonthsDuration: 0,
@@ -23,7 +24,7 @@ function App() {
     },
     {
       id: 3,
-      cardType: 'Liquid Card',
+      type: 'Liquid Card',
       aprPercentage: 33.9,
       balanceTransferOfferMonthsDuration: 12,
       purchaseOfferMonthsDuration: 6,
@@ -35,6 +36,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Cards cards={cards}/>
     </div>
   );
 }
