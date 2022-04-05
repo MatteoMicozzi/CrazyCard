@@ -10,7 +10,7 @@ function App() {
       aprPercentage: 18.9,
       balanceTransferOfferMonthsDuration: 0,
       purchaseOfferMonthsDuration: 6,
-      poundsCreditAvailable: 1200,
+      creditAvailableInPounds: 1200,
       selected: false
     },
     {
@@ -19,7 +19,7 @@ function App() {
       aprPercentage: 33.9,
       balanceTransferOfferMonthsDuration: 0,
       purchaseOfferMonthsDuration: 0,
-      poundsCreditAvailable: 300,
+      creditAvailableInPounds: 300,
       selected: false
     },
     {
@@ -28,14 +28,16 @@ function App() {
       aprPercentage: 33.9,
       balanceTransferOfferMonthsDuration: 12,
       purchaseOfferMonthsDuration: 6,
-      poundsCreditAvailable: 3000,
+      creditAvailableInPounds: 3000,
       selected: false
     }
   ])
 
   return (
     <div className="App">
-      <Header />
+      <div className="Form">
+        <Header />
+      </div>
       <Cards cards={cards}/>
     </div>
   );
