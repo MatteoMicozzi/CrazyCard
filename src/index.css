@@ -17,7 +17,7 @@ body {
 
 .Form {
   background: #84AEED;
-  max-width: 500px;
+  max-width: 700px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
@@ -30,19 +30,87 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .Card {
   background: #A1BFE1;
-  max-width: 500px;
+  max-width: 650px;
   margin: 30px auto;
   overflow: auto;
-  min-height: auto;
+  height: auto;
   border: 4px solid #5C9AEB;
   padding: 30px;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.submit-form {
+  margin: 25px 10px 20px 10px;
+}
+
+.form-row label {
+  display: block;
+}
+
+.form-row input {
+  width: 95%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.form-name {
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-name {
+  width: 20%;
+}
+.first-name, .last-name {
+  width: 35%;
+}
+
+.form-finance {
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.employment-status, .annual-income {
+  width: 48%;
+}
+
+.form-address {
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.house-number, .postcode {
+  width: 48%;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn-block {
+  margin-top: 20px;
+  display: block;
+  width: 97%;
 }
 
 /* .card.selection {

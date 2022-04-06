@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Cards from './components/Cards'
+import UserDetails from './components/UserDetails'
 
 function App() {
-  const [cards] = useState([
+  const [cards, setCards] = useState([
     {
       id: 1,
       type: 'Student Life',
@@ -37,6 +38,7 @@ function App() {
     <div className="App">
       <div className="Form">
         <Header />
+        <UserDetails />
       </div>
       <Cards cards={cards}/>
     </div>
