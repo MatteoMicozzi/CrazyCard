@@ -34,11 +34,15 @@ function App() {
     }
   ])
 
+const cardsForUser = (userData) => {
+  console.log(userData)
+}
+
   return (
     <div className="App">
       <div className="Form">
         <Header />
-        <UserDetails />
+        <UserDetails onUserData={cardsForUser}/>
       </div>
       <Cards cards={cards}/>
     </div>

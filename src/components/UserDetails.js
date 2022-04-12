@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const UserDetails = () => {
+const UserDetails = ({ onUserData }) => {
   const [titleName, setTitleName] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
@@ -10,8 +10,32 @@ const UserDetails = () => {
   const [houseNumber, setHouseNumber] = useState('')
   const [postcode, setPostcode] = useState('')
 
+  const onSubmit = (e) => {
+    e.preventDefault()
+
+    if(!titleName) { alert('Please insert Title Name'); return }
+    if(!firstName) { alert('Please insert First Name'); return }
+    if(!lastName) { alert('Please insert Last Name'); return }
+    if(!dateOfBirth) { alert('Please insert Date Of Birth'); return }
+    if(!status) { alert('Please insert Employment Status'); return }
+    if(!income) { alert('Please insert Annual Income'); return }
+    if(!houseNumber) { alert('Please insert House Number'); return }
+    if(!postcode) { alert('Please insert Postcode'); return }
+
+    onUserData({ titleName, firstName, lastName, dateOfBirth, status, income, houseNumber, postcode })
+
+    // setTitleName('')
+    // setFirstName('')
+    // setLastName('')
+    // setDateOfBirth('')
+    // setStatus('')
+    // setIncome('')
+    // setHouseNumber('')
+    // setPostcode('')
+  }
+
   return (
-    <form className='submit-form'>
+    <form className='submit-form' onSubmit={onSubmit}>
       <div className='form-row'>
         <div className='form-name'>
           <div className='title-name'>
