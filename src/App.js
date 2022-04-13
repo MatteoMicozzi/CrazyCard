@@ -39,7 +39,15 @@ function App() {
   ])
 
   const cardsForUser = (userData) => {
-    setFilteredCards(cards);
+    var userCards = [];
+
+    cards.forEach((card) => {
+      if (card.userStatus == userData.status.toLowerCase()) {
+        userCards.push(card);
+      };
+    });
+
+    setFilteredCards(userCards);
   };
 
   return (
