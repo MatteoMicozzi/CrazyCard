@@ -14,7 +14,7 @@ function App() {
       purchaseOfferMonthsDuration: 6,
       creditAvailableInPounds: 1200,
       userStatus: 'student',
-      minimumIncome: 0
+      minimumIncome: NaN
     },
     {
       id: 2,
@@ -45,6 +45,8 @@ function App() {
       if (card.userStatus == userData.status.toLowerCase()) {
         userCards.push(card);
       } else if (card.type == 'Anywhere Card') {
+        userCards.push(card);
+      } else if (parseInt(userData.income) >= card.minimumIncome) {
         userCards.push(card);
       };
     });
