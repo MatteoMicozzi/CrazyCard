@@ -44,6 +44,8 @@ function App() {
     cards.forEach((card) => {
       if (card.userStatus == userData.status.toLowerCase()) {
         userCards.push(card);
+      } else if (card.type == 'Anywhere Card') {
+        userCards.push(card);
       };
     });
 
