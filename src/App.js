@@ -4,6 +4,7 @@ import Cards from './components/Cards'
 import UserDetails from './components/UserDetails'
 
 function App() {
+  const [filteredCards, setFilteredCards] = useState([])
   const [cards, setCards] = useState([
     {
       id: 1,
@@ -12,7 +13,8 @@ function App() {
       balanceTransferOfferMonthsDuration: 0,
       purchaseOfferMonthsDuration: 6,
       creditAvailableInPounds: 1200,
-      selected: false
+      userStatus: 'student',
+      minimumIncome: 0
     },
     {
       id: 2,
@@ -21,7 +23,8 @@ function App() {
       balanceTransferOfferMonthsDuration: 0,
       purchaseOfferMonthsDuration: 0,
       creditAvailableInPounds: 300,
-      selected: false
+      userStatus: 'any',
+      minimumIncome: 0
     },
     {
       id: 3,
@@ -30,13 +33,14 @@ function App() {
       balanceTransferOfferMonthsDuration: 12,
       purchaseOfferMonthsDuration: 6,
       creditAvailableInPounds: 3000,
-      selected: false
+      userStatus: 'any',
+      minimumIncome: 16000
     }
   ])
 
-const cardsForUser = (userData) => {
-  console.log(userData)
-}
+  const cardsForUser = (userData) => {
+    setFilteredCards(cards);
+  };
 
   return (
     <div className="App">
@@ -44,7 +48,7 @@ const cardsForUser = (userData) => {
         <Header />
         <UserDetails onUserData={cardsForUser}/>
       </div>
-      <Cards cards={cards}/>
+      <Cards cards={filteredCards}/>
     </div>
   );
 }
